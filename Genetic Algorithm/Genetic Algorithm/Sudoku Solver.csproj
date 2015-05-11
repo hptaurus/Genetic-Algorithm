@@ -44,6 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Population.cs" />
+    <Compile Include="Classes\Chromosome.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>

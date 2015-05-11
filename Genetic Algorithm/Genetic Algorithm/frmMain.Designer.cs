@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSudoku = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +48,8 @@
             // 
             // dgvSudoku
             // 
+            this.dgvSudoku.AllowUserToAddRows = false;
+            this.dgvSudoku.AllowUserToDeleteRows = false;
             this.dgvSudoku.AllowUserToResizeColumns = false;
             this.dgvSudoku.AllowUserToResizeRows = false;
             this.dgvSudoku.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -61,13 +64,24 @@
             this.Column7,
             this.Column8,
             this.Column9});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSudoku.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSudoku.GridColor = System.Drawing.Color.Black;
             this.dgvSudoku.Location = new System.Drawing.Point(12, 27);
+            this.dgvSudoku.MultiSelect = false;
             this.dgvSudoku.Name = "dgvSudoku";
             this.dgvSudoku.RowHeadersVisible = false;
             this.dgvSudoku.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvSudoku.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvSudoku.Size = new System.Drawing.Size(273, 273);
             this.dgvSudoku.TabIndex = 0;
+            this.dgvSudoku.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dgvSudoku_CellBeginEdit);
             // 
             // Column1
             // 
@@ -148,7 +162,7 @@
             // 
             this.mnuNew.Name = "mnuNew";
             this.mnuNew.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.mnuNew.Size = new System.Drawing.Size(152, 22);
+            this.mnuNew.Size = new System.Drawing.Size(141, 22);
             this.mnuNew.Text = "&New";
             // 
             // frmMain

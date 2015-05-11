@@ -27,13 +27,15 @@ namespace Genetic_Algorithm
                 dgvSudoku.Rows[i].Height = dgvSudoku.Columns[i].Width = 30;
                 if(i%3 == 2)
                     dgvSudoku.Rows[i].DividerHeight = dgvSudoku.Columns[i].DividerWidth = 1;
-                for (int j = 0; j < 9; j++)
-                {
-                    
-                }
+                ((DataGridViewTextBoxColumn)dgvSudoku.Columns[i]).MaxInputLength = 1;
             }
             dgvSudoku.Height = dgvSudoku.Width = dgvSudoku.Rows[0].Height * dgvSudoku.Rows.Count + 3;
-
         }
+
+        private void dgvSudoku_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
+        {
+            
+        }
+
     }
 }
