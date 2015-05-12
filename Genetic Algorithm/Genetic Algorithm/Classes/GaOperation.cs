@@ -16,7 +16,7 @@ namespace Genetic_Algorithm.Classes
         #region Constructors
         public GaOperation()
         {
-
+            
         }
         #endregion
 

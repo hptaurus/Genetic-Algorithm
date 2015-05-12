@@ -7,7 +7,7 @@ using Genetic_Algorithm.Interfaces;
 
 namespace Genetic_Algorithm.Classes
 {
-    public class Population
+    public class Population : IGeneticAlgorithm
     {
         #region Fields
         private int _averageFitness, _maximumFitness, _minimumFitness;
@@ -45,6 +45,7 @@ namespace Genetic_Algorithm.Classes
         #region Private Methods
         private int CalcAvrgFitness()
         {
+            
             return 0;
         }
         private int CalcMaxFitness()
@@ -55,11 +56,13 @@ namespace Genetic_Algorithm.Classes
         {
             return 0;
         }
+        private List<List<int>> DgvtoList()
+        {
+            return null;
+        }
         #endregion
 
         #region Public Methods
-        
-        
         //Selection
         public Chromosome Selection()
         {
@@ -81,7 +84,7 @@ namespace Genetic_Algorithm.Classes
         }
         public void Run()
         {
-
+            
         }
         #endregion
 

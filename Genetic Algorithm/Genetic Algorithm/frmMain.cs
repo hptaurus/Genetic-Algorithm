@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Genetic_Algorithm.Classes;
 
 namespace Genetic_Algorithm
 {
@@ -21,7 +22,6 @@ namespace Genetic_Algorithm
         {
             while (dgvSudoku.Rows.Count < 9)
                 dgvSudoku.Rows.Add();
-            dgvSudoku.Height = dgvSudoku.Rows[0].Height * dgvSudoku.Rows.Count + 3;
             for (int i = 0; i < 9; i++)
             {
                 dgvSudoku.Rows[i].Height = dgvSudoku.Columns[i].Width = 30;
