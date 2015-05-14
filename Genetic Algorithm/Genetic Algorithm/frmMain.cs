@@ -20,16 +20,16 @@ namespace Genetic_Algorithm
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            while (dgvSudoku.Rows.Count < 9)
-                dgvSudoku.Rows.Add();
+            while (this.dgvSudoku.Rows.Count < 9)
+                this.dgvSudoku.Rows.Add();
             for (int i = 0; i < 9; i++)
             {
-                dgvSudoku.Rows[i].Height = dgvSudoku.Columns[i].Width = 30;
+                this.dgvSudoku.Rows[i].Height = this.dgvSudoku.Columns[i].Width = 30;
                 if(i%3 == 2)
-                    dgvSudoku.Rows[i].DividerHeight = dgvSudoku.Columns[i].DividerWidth = 1;
-                ((DataGridViewTextBoxColumn)dgvSudoku.Columns[i]).MaxInputLength = 1;
+                    this.dgvSudoku.Rows[i].DividerHeight = this.dgvSudoku.Columns[i].DividerWidth = 1;
+                ((DataGridViewTextBoxColumn)this.dgvSudoku.Columns[i]).MaxInputLength = 1;
             }
-            dgvSudoku.Height = dgvSudoku.Width = dgvSudoku.Rows[0].Height * dgvSudoku.Rows.Count + 3;
+            this.dgvSudoku.Height = this.dgvSudoku.Width = this.dgvSudoku.Rows[0].Height * this.dgvSudoku.Rows.Count + 3;
         }
 
         private void dgvSudoku_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)

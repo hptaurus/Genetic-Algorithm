@@ -7,7 +7,7 @@ using Genetic_Algorithm.Interfaces;
 
 namespace Genetic_Algorithm.Classes
 {
-    public class Population : IGeneticAlgorithm
+    public class Population
     {
         #region Fields
         private int _averageFitness, _maximumFitness, _minimumFitness;
@@ -63,29 +63,7 @@ namespace Genetic_Algorithm.Classes
         #endregion
 
         #region Public Methods
-        //Selection
-        public Chromosome Selection()
-        {
-            return null;
-        }
-
-
-        //Crossover
-        public Chromosome PMXCrossOver(Chromosome parent1, Chromosome parent2)
-        {
-            return null;
-        }
-
-
-        //Mutation
-        public Chromosome Mutation(Chromosome solution)
-        {
-            return null;
-        }
-        public void Run()
-        {
-            
-        }
+        
         #endregion
 
         #region Events
